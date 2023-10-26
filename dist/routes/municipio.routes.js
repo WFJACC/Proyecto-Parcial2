@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const municipio_controller_1 = require("../controllers/municipio.controller");
+const router = (0, express_1.Router)();
+router.get('/', municipio_controller_1.getMunicipios);
+router.get('/:id', municipio_controller_1.getMunicipio);
+router.delete('/:id', municipio_controller_1.deleteMunicipio);
+router.post('/', municipio_controller_1.postMunicipio);
+router.put('/:id', municipio_controller_1.putMunicipio);
+exports.default = router;
